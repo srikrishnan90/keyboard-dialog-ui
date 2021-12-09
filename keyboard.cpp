@@ -24,13 +24,18 @@ void keyboard::on_pushButton_clicked()
 void keyboard::on_pushButton_2_clicked()
 {
 
-getdata();
+getData();
 this->accept();
 }
 
-QString keyboard::getdata()
+QString keyboard::getData()
 {
     return(ui->lineEdit->text());
+}
+
+void keyboard::setData(const QString &labelText)
+{
+    ui->label->setText(labelText);
 }
 
 

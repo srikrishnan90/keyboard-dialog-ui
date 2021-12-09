@@ -17,7 +17,8 @@ class keyboard : public QDialog
 public:
     explicit keyboard(QWidget *parent = nullptr);
     ~keyboard();
-     QString getdata();
+     QString getData();
+     void setData(const QString &labelText);
 
 private slots:
     void on_pushButton_clicked();

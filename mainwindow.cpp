@@ -18,20 +18,16 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+    QString er = "data";
     key = new keyboard(this);
     key->setModal(true);
+    key->setData(er);
     key->exec();
     QString foo = key->getdata();
     ui->lineEdit->setText(foo);
     //qDebug()<<foo;
 
 }
-
-void MainWindow::receivedata(QString name)
-{
-    ui->lineEdit->setText(name);
-}
-
 
 void MainWindow::on_pushButton_2_clicked()
 {
